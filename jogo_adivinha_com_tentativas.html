@@ -1,0 +1,15 @@
+<meta charset="UTF-8">
+<script>
+    var numeroPensado = Math.round(Math.random() * 100);
+    var numeroDaTentativa = 1;
+    while(numeroDaTentativa <= 3){
+        var chute = prompt("Qual você acha que é?");
+        if(chute == numeroPensado){
+            alert("Parabéns! Você acertou.");
+            break;
+        } else {
+            alert("Você errou! Tente novamente.");
+        }
+        numeroDaTentativa++;
+    }
+</script>

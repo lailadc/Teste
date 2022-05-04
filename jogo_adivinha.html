@@ -1,0 +1,9 @@
+<meta charset="UTF-8">
+<script>
+   var mostra = function(frase){document.write(frase + "<br>");};
+   var numD = Math.random() * 10;
+   var num = Math.round(numD);
+   var chute = prompt("Pronto. Já pensei. Qual número você acha que é?");
+   if(chute == num){mostra("UAU! Você acertou! Eu pensei no número " + num + ".");}
+   else{mostra("Você errou! Eu pensei no número " + num + ".");}
+</script>

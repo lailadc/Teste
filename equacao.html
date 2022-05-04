@@ -1,0 +1,98 @@
+<meta charset = "UTF-8">
+<script>
+    var mostra = function(frase){
+        document.write(frase + "<br>");
+    };
+    var a, b, c;
+    a = Number(prompt("Informe o coeficiente A."));
+    b = Number(prompt("Informe o coeficiente B."));
+    c = Number(prompt("Informe o coeficiente C."));
+    if(a == 0){
+        if(b == 0){
+            if(c == 0){
+                mostra("f(x) = 0");
+                mostra("Não exite equação do 2° grau.");
+            } else {
+                mostra("f(x) = " + c);
+                mostra("Não existe equação do 2° grau.");
+            }
+        } else {
+            if(b == 1){
+                if(c == 0){
+                    mostra("f(x) = x");
+                    mostra("Não existe equação do 2° grau.")
+                } else {
+                    mostra("f(x) = x + " + c);
+                    mostra("Não existe equação do 2° grau.");
+                }
+            } else {
+                if(c == 0){
+                    mostra("f(x) = " + b + "x");
+                    mostra("Não existe equação do 2° grau.");
+                } else {
+                    mostra("f(x) = " + b + "x + " + c);
+                    mostra("Não existe equação do 2° grau.");
+                }
+            }
+        }
+    } else {
+        if(a == 1){
+            if(b == 0){
+                if(c == 0){
+                    mostra("f(x) = x²");
+                } else {
+                    mostra("f(x) = x² + " + c);
+                }
+            } else {
+                if(b == 1){
+                    if(c == 0){
+                        mostra("f(x) = x² + x");
+                    } else {
+                        mostra("f(x) = x² + x + " + c);
+                    }
+                } else {
+                    if(c == 0){
+                        mostra("f(x) = x² + " + b + "x");
+                    } else {
+                        mostra("f(x) = x² + " + b + "x + " + c);
+                    }
+                }
+            }
+        } else {
+            if(b == 0){
+                if(c == 0){
+                    mostra("f(x) = " + a + "x²");
+                } else {
+                    mostra("f(x) = " + a + "x² + " + c);
+                }
+            } else {
+                if (b == 1){
+                    if(c == 0){
+                        mostra("f(x) = " + a + "x² + x");
+                    } else {
+                        mostra("f(x) = " + a + "x² + x + " + c);
+                    }
+                } else {
+                    if(c == 0){
+                        mostra("f(x) = " + a + "x² + " + b + "x");
+                    } else {
+                        mostra("f(x) = " + a + "x² + " + b + "x + " + c);
+                    }
+                }
+            }
+        }
+        var D = b*b - 4*a*c;
+        if(D < 0){
+            mostra("Não existem raízes reais.");
+        } else {
+        var R, x1, x2;
+        R = Math.sqrt(D);
+        x1 = (-b - R)/(2*a);
+        x2 = (-b + R)/(2*a);
+        mostra("Valores de x para f(x)=0:");
+        mostra("x = " + x1);
+        mostra("ou");
+        mostra("x = " + x2);
+        }
+    }
+</script>

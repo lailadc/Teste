@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<script>
+    var s, n, d, q, p;
+    s = 0;
+    n = parseInt(prompt("Informe um número inteiro."));
+    for(d=1; d<=n; d++){
+        q = n%d;
+        if(q == 0){
+            alert(d + " é divisor de " + n + ".");
+            s = s + d;
+        }
+    }
+    p = s - n;
+    document.write("Soma dos divisores de " + n + " com excessão dele mesmo é " + p + ".<br>");
+    if(p == n){
+        document.write("Logo, " + n + " é um número perfeito.");
+    } else {
+        document.write("Logo, " + n + " não é um número perfeito.");
+    }
+</script>

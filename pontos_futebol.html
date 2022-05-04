@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<script>
+    var mostra = function(frase){document.write(frase); document.write("<br>");};
+    var calculaPontos = function(vitórias, empates){return (vitórias * 3) + parseInt(empates);};
+    var time = prompt("Qual o nome do seu time?");
+    var vitoriasT = prompt("Quantos jogos o " + time + " venceu?");
+    var empatesT = prompt("Quantos jogos o " + time + " empatou?");
+    var rival = prompt("Qual o time rival do " + time);
+    var vitoriasR = prompt("Quantos jogos o " + rival + " venceu?");
+    var empatesR = prompt("Quantos jogos o " + rival + " empatou?");
+    var T = calculaPontos(vitoriasT, empatesT);
+    var R = calculaPontos(vitoriasR, empatesR);
+    if(T > R){mostra("O " + time + " está indo MELHOR que o " + rival + ".");}
+    if(T < R){mostra("O " + time + " está indo PIOR que o " + rival + ".");}
+    if(T == R){mostra("O " + time + " está EMPATADO com o " + rival + ".");}
+</script>

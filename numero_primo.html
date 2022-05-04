@@ -1,0 +1,17 @@
+<meta charset = "UTF-8">
+<script>
+    var c, n, d, q;
+    c = 0;
+    n = parseInt(prompt("Informe um número inteiro."));
+    for(d=1; d<=n; d++){
+        q = n%d;
+        if(q == 0){
+            c++;
+        }
+    }
+    if(c == 2){
+        document.write(n + " é um número primo.");
+    } else {
+        document.write(n + " não é um número primo.");
+    }
+</script>
